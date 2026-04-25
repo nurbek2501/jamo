@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.hero-otadiv{
+    width:100%;
+    min-height:520px;
+    background:#f5f7fa;
+    padding:60px 8%;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:20px;
+}
+
+/* text */
+.hero-h1{
+    font-size:64px;
+    color:#222;
+    line-height:65px;
+    font-weight:700;
+    grid-column:1;
+    margin:0;
+}
+
+.hero-h2{
+    font-size:64px;
+    color:#39b54a;
+    line-height:65px;
+    font-weight:700;
+    grid-column:1;
+    margin-top:-25px;
+}
+
+.hero-p{
+    font-size:16px;
+    color:#666;
+    width:500px;
+    line-height:22px;
+    grid-column:1;
+    margin-top:-10px;
+}
+
+.hero-btn{
+    width:130px;
+    height:46px;
+    background:#39b54a;
+    color:white;
+    border:none;
+    border-radius:4px;
+    font-size:16px;
+    grid-column:1;
+    margin-top:15px;
+}
+
+/* image */
+.hero-otadiv img{
+    width:430px;
+    grid-column:2;
+    grid-row:1 / 5;
+    justify-self:center; /* oldin end edi */
+    margin-left:-80px;   /* chaproqqa suradi */
+}
+
+/* tablet */
+@media(max-width:950px){
+    .hero-h1,.hero-h2{
+        font-size:48px;
+        line-height:52px;
+    }
+
+    .hero-p{
+        width:100%;
+    }
+
+    .hero-otadiv img{
+        width:330px;
+        margin-left:-40px;
+    }
+}
+
+/* mobile */
+@media(max-width:700px){
+    .hero-otadiv{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:40px 20px;
+    }
+
+    .hero-h1,.hero-h2,.hero-p,.hero-btn,.hero-otadiv img{
+        grid-column:1;
+    }
+
+    .hero-h1,.hero-h2{
+        font-size:34px;
+        line-height:38px;
+    }
+
+    .hero-h2{
+        margin-top:-10px;
+    }
+
+    .hero-p{
+        margin-top:0;
+    }
+
+    .hero-btn{
+        margin:auto;
+        margin-top:15px;
+    }
+
+    .hero-otadiv img{
+        grid-row:auto;
+        width:260px;
+        margin-left:0;
+        margin-top:20px;
+        justify-self:center;
+    }
+}
